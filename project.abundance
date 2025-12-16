@@ -273,8 +273,8 @@
     },
     {
       "atomType": "Fusion",
-      "x": 0.4262295081967213,
-      "y": 0.5736263736263736,
+      "x": 0.4961173425366696,
+      "y": 0.5934065934065934,
       "uniqueID": "id-184",
       "ioValues": [
         {
@@ -365,22 +365,54 @@
         {
           "name": "Shape 1",
           "ioValue": null
+        },
+        {
+          "name": "Shape 6",
+          "ioValue": null
         }
       ]
     },
     {
-      "atomType": "Rectangle",
-      "x": 0.33045729076790337,
-      "y": 0.221978021978022,
-      "uniqueID": "id-254",
+      "atomType": "Circle",
+      "x": 0.32269197584124243,
+      "y": 0.2065934065934066,
+      "uniqueID": "id-258",
       "ioValues": [
         {
-          "name": "x length",
+          "name": "diameter",
+          "ioValue": 100
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4226919758412424,
+      "y": 0.2065934065934066,
+      "uniqueID": "id-262",
+      "ioValues": [
+        {
+          "name": "height",
           "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.4745470232959447,
+      "y": 0.3714285714285714,
+      "uniqueID": "id-267",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
         },
         {
-          "name": "y length",
-          "ioValue": 10
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 6
         }
       ]
     }
@@ -470,6 +502,21 @@
       "ap2Name": "geometry2",
       "ap1ID": "id-246",
       "ap2ID": "id-160"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-258",
+      "ap2ID": "id-262"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-262",
+      "ap2ID": "id-267"
+    },
+    {
+      "ap2Name": "Shape 6",
+      "ap1ID": "id-267",
+      "ap2ID": "id-246"
     }
   ],
   "unitsKey": "MM",
