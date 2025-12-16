@@ -335,6 +335,155 @@
         }
       ],
       "unionType": "Fusion"
+    },
+    {
+      "atomType": "Move",
+      "x": 0.34081104400345125,
+      "y": 0.21978021978021978,
+      "uniqueID": "id-210",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 30
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0,
+          "currentEquation": "0"
+        },
+        {
+          "name": "zDist",
+          "ioValue": 3
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.45211389128559104,
+      "y": 0.17142857142857143,
+      "uniqueID": "id-216",
+      "ioValues": [
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.4641932700603969,
+      "y": 0.07912087912087912,
+      "uniqueID": "id-222",
+      "ioValues": [
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.4512510785159621,
+      "y": 0.2879120879120879,
+      "uniqueID": "id-228",
+      "ioValues": [
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 90
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.46074201898188094,
+      "y": 0.3802197802197802,
+      "uniqueID": "id-234",
+      "ioValues": [
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 180
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.46246764452113887,
+      "y": 0.47472527472527476,
+      "uniqueID": "id-240",
+      "ioValues": [
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 270
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.5677308024158757,
+      "y": 0.27692307692307694,
+      "uniqueID": "id-246",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 4",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 5",
+          "ioValue": null
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -385,8 +534,18 @@
     },
     {
       "ap2Name": "geometry",
+      "ap1ID": "id-130",
+      "ap2ID": "id-222"
+    },
+    {
+      "ap2Name": "geometry",
       "ap1ID": "id-139",
       "ap2ID": "id-153"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-139",
+      "ap2ID": "id-210"
     },
     {
       "ap2Name": "Shape 2",
@@ -406,6 +565,56 @@
     {
       "ap2Name": "geometry1",
       "ap1ID": "id-184",
+      "ap2ID": "id-160"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-210",
+      "ap2ID": "id-216"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-210",
+      "ap2ID": "id-228"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-210",
+      "ap2ID": "id-234"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-210",
+      "ap2ID": "id-240"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-216",
+      "ap2ID": "id-246"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-222",
+      "ap2ID": "id-246"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-228",
+      "ap2ID": "id-246"
+    },
+    {
+      "ap2Name": "Shape 4",
+      "ap1ID": "id-234",
+      "ap2ID": "id-246"
+    },
+    {
+      "ap2Name": "Shape 5",
+      "ap1ID": "id-240",
+      "ap2ID": "id-246"
+    },
+    {
+      "ap2Name": "geometry2",
+      "ap1ID": "id-246",
       "ap2ID": "id-160"
     }
   ],
