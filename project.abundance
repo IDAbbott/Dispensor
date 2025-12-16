@@ -11,11 +11,11 @@
     },
     {
       "name": "CircleDia2",
-      "ioValue": 35
+      "ioValue": 40
     },
     {
       "name": "Height",
-      "ioValue": 40
+      "ioValue": 10
     }
   ],
   "topLevel": true,
@@ -70,7 +70,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 35
+          "ioValue": 40
         }
       ]
     },
@@ -88,7 +88,7 @@
         },
         {
           "name": "Step",
-          "ioValue": 3
+          "ioValue": 4
         }
       ],
       "topLevel": false,
@@ -111,7 +111,7 @@
             },
             {
               "name": "step",
-              "ioValue": 3
+              "ioValue": 4
             },
             {
               "name": "height",
@@ -189,7 +189,7 @@
       "ioValues": [
         {
           "name": "height",
-          "ioValue": 40
+          "ioValue": 10
         }
       ]
     },
@@ -207,7 +207,7 @@
       "ioValues": [
         {
           "name": "height",
-          "ioValue": 40
+          "ioValue": 10
         }
       ]
     },
@@ -219,7 +219,7 @@
       "ioValues": [
         {
           "name": "height",
-          "ioValue": 40
+          "ioValue": 10
         }
       ]
     },
