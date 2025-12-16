@@ -11,7 +11,7 @@
     },
     {
       "name": "CircleDia2",
-      "ioValue": 40
+      "ioValue": 100
     },
     {
       "name": "Height",
@@ -70,14 +70,14 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 40
+          "ioValue": 100
         }
       ]
     },
     {
       "atomType": "GitHubMolecule",
       "x": 0.14840379637618636,
-      "y": 0.8153846153846154,
+      "y": 0.8241758241758241,
       "uniqueID": "id-109",
       "name": "2D-Rounded-Gear",
       "ioValues": [
@@ -88,7 +88,7 @@
         },
         {
           "name": "Step",
-          "ioValue": 4
+          "ioValue": 9
         }
       ],
       "topLevel": false,
@@ -111,7 +111,7 @@
             },
             {
               "name": "step",
-              "ioValue": 4
+              "ioValue": 9
             },
             {
               "name": "height",
@@ -290,6 +290,11 @@
       "ap2Name": "Shape 1",
       "ap1ID": "id-126",
       "ap2ID": "id-148"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-126",
+      "ap2ID": "fab73b2a-bbf8-4c5b-a712-e09dbb0d6d83"
     },
     {
       "ap2Name": "geometry2",
