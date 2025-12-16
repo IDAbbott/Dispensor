@@ -250,6 +250,35 @@
             "color": "#aad7f2",
             "bom": []
           }
+        },
+        {
+          "name": "Shape 4",
+          "ioValue": {
+            "geometry": "cut-extrude-move-9b216bcc-10-9-10-0-100-0-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-7-move-extrude-circle-11-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-10-100-0-0",
+            "tags": [
+              "aTag"
+            ],
+            "color": "#A3CE5B",
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "bom": [],
+            "dimension": "3D"
+          }
         }
       ],
       "unionType": "Fusion"
@@ -609,7 +638,7 @@
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 96
+          "ioValue": 100
         },
         {
           "name": "yDist",
@@ -636,8 +665,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.46684831970935514,
-      "y": 0.8375,
+      "x": 0.46321525885558584,
+      "y": 0.83,
       "uniqueID": "id-548"
     },
     {
@@ -654,23 +683,50 @@
     },
     {
       "atomType": "Move",
-      "x": 0.35249772933696644,
+      "x": 0.35240690281562215,
       "y": 0.96,
       "uniqueID": "id-556",
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 96
+          "ioValue": 100
         },
         {
           "name": "yDist",
-          "ioValue": 0
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "zDist",
           "ioValue": 0
         }
       ]
+    },
+    {
+      "atomType": "Export",
+      "x": 0.623069936421435,
+      "y": 0.8475,
+      "uniqueID": "id-563",
+      "ioValues": [
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Idler",
+          "currentEquation": "Idler"
+        }
+      ],
+      "type": "STEP",
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Idler"
     }
   ],
   "allConnectors": [
@@ -723,6 +779,11 @@
       "ap2Name": "geometry",
       "ap1ID": "7aba9d1b-9aaa-4b7c-9450-0efd168dcf32",
       "ap2ID": "id-130"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "7aba9d1b-9aaa-4b7c-9450-0efd168dcf32",
+      "ap2ID": "id-552"
     },
     {
       "ap2Name": "geometry",
@@ -791,11 +852,6 @@
     },
     {
       "ap2Name": "geometry",
-      "ap1ID": "id-338",
-      "ap2ID": "id-552"
-    },
-    {
-      "ap2Name": "geometry",
       "ap1ID": "id-341",
       "ap2ID": "id-429"
     },
@@ -838,6 +894,16 @@
       "ap2Name": "geometry1",
       "ap1ID": "id-543",
       "ap2ID": "id-548"
+    },
+    {
+      "ap2Name": "Shape 4",
+      "ap1ID": "id-548",
+      "ap2ID": "id-184"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-548",
+      "ap2ID": "id-563"
     },
     {
       "ap2Name": "geometry",
