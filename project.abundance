@@ -7,7 +7,7 @@
   "ioValues": [
     {
       "name": "CircleDia1",
-      "ioValue": 5
+      "ioValue": 22
     },
     {
       "name": "CircleDia2",
@@ -58,7 +58,7 @@
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 5
+          "ioValue": 22
         }
       ]
     },
@@ -225,7 +225,8 @@
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 0
+          "ioValue": 0,
+          "currentEquation": "0"
         },
         {
           "name": "yDist",
@@ -234,7 +235,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 5
+          "ioValue": 0
         }
       ]
     },
@@ -245,20 +246,93 @@
       "uniqueID": "id-160"
     },
     {
-      "atomType": "Assembly",
-      "x": 0.38654012079378774,
-      "y": 0.23956043956043957,
-      "uniqueID": "id-169",
+      "atomType": "Export",
+      "x": 0.5901639344262295,
+      "y": 0.7714285714285715,
+      "uniqueID": "id-174",
+      "ioValues": [
+        {
+          "name": "File Type",
+          "ioValue": "STEP",
+          "currentEquation": "STEP"
+        },
+        {
+          "name": "Resolution (dpi)",
+          "ioValue": 96
+        },
+        {
+          "name": "Part Name",
+          "ioValue": "Cog",
+          "currentEquation": "Cog"
+        }
+      ],
+      "type": "STEP",
+      "resolution": 96,
+      "importIndex": 0,
+      "partName": "Cog"
+    },
+    {
+      "atomType": "Fusion",
+      "x": 0.40465918895599656,
+      "y": 0.18681318681318682,
+      "uniqueID": "id-179",
       "ioValues": [
         {
           "name": "Shape 1",
-          "ioValue": null
+          "ioValue": {
+            "geometry": "extrude-circle-11-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-10",
+            "dimension": "3D",
+            "tags": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "bom": []
+          }
         },
         {
           "name": "Shape 2",
-          "ioValue": null
+          "ioValue": {
+            "geometry": "move-extrude-circle-50-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-10-0-0-0",
+            "dimension": "3D",
+            "tags": [],
+            "plane": {
+              "origin": [
+                0,
+                0,
+                0
+              ],
+              "xDir": [
+                1,
+                0,
+                0
+              ],
+              "normal": [
+                0,
+                0,
+                1
+              ]
+            },
+            "color": "#aad7f2",
+            "bom": []
+          }
         }
-      ]
+      ],
+      "unionType": "Fusion"
     }
   ],
   "allConnectors": [
@@ -310,7 +384,7 @@
     {
       "ap2Name": "Shape 1",
       "ap1ID": "id-130",
-      "ap2ID": "id-169"
+      "ap2ID": "id-179"
     },
     {
       "ap2Name": "geometry",
@@ -320,7 +394,7 @@
     {
       "ap2Name": "Shape 2",
       "ap1ID": "id-153",
-      "ap2ID": "id-169"
+      "ap2ID": "id-179"
     },
     {
       "ap2Name": "number or geometry",
@@ -328,8 +402,13 @@
       "ap2ID": "fab73b2a-bbf8-4c5b-a712-e09dbb0d6d83"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-160",
+      "ap2ID": "id-174"
+    },
+    {
       "ap2Name": "geometry2",
-      "ap1ID": "id-169",
+      "ap1ID": "id-179",
       "ap2ID": "id-160"
     }
   ],
