@@ -164,8 +164,8 @@
     },
     {
       "atomType": "Fusion",
-      "x": 0.49500454132606725,
-      "y": 0.37749999999999995,
+      "x": 0.55858310626703,
+      "y": 0.3625,
       "uniqueID": "id-184",
       "ioValues": [
         {
@@ -496,8 +496,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.11625794732061762,
-      "y": 0.9149999999999999,
+      "x": 0.12352406902815621,
+      "y": 0.8574999999999999,
       "uniqueID": "id-518",
       "name": "2D-Rounded-Gear",
       "ioValues": [
@@ -603,13 +603,13 @@
     },
     {
       "atomType": "Move",
-      "x": 0.24250681198910082,
-      "y": 0.9025,
+      "x": 0.259763851044505,
+      "y": 0.8375,
       "uniqueID": "id-531",
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 89
+          "ioValue": 96
         },
         {
           "name": "yDist",
@@ -624,13 +624,51 @@
     },
     {
       "atomType": "Extrude",
-      "x": 0.3115349682107175,
-      "y": 0.9149999999999999,
+      "x": 0.3932788374205268,
+      "y": 0.8350000000000001,
       "uniqueID": "id-543",
       "ioValues": [
         {
           "name": "height",
           "ioValue": 7
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.46684831970935514,
+      "y": 0.8375,
+      "uniqueID": "id-548"
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.2524977293369664,
+      "y": 0.96,
+      "uniqueID": "id-552",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.35249772933696644,
+      "y": 0.96,
+      "uniqueID": "id-556",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 96
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
         }
       ]
     }
@@ -753,6 +791,11 @@
     },
     {
       "ap2Name": "geometry",
+      "ap1ID": "id-338",
+      "ap2ID": "id-552"
+    },
+    {
+      "ap2Name": "geometry",
       "ap1ID": "id-341",
       "ap2ID": "id-429"
     },
@@ -790,6 +833,21 @@
       "ap2Name": "geometry",
       "ap1ID": "id-531",
       "ap2ID": "id-543"
+    },
+    {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-543",
+      "ap2ID": "id-548"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-552",
+      "ap2ID": "id-556"
+    },
+    {
+      "ap2Name": "geometry2",
+      "ap1ID": "id-556",
+      "ap2ID": "id-548"
     }
   ],
   "unitsKey": "MM",
