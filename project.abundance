@@ -7,7 +7,7 @@
   "ioValues": [
     {
       "name": "CircleDia1",
-      "ioValue": 40
+      "ioValue": 5
     },
     {
       "name": "CircleDia2",
@@ -52,20 +52,20 @@
     },
     {
       "atomType": "Circle",
-      "x": 0.1592760180995475,
-      "y": 0.13125,
+      "x": 0.1622088006902502,
+      "y": 0.11428571428571428,
       "uniqueID": "7aba9d1b-9aaa-4b7c-9450-0efd168dcf32",
       "ioValues": [
         {
           "name": "diameter",
-          "ioValue": 40
+          "ioValue": 5
         }
       ]
     },
     {
       "atomType": "Circle",
-      "x": 0.16289592760180993,
-      "y": 0.3666666666666667,
+      "x": 0.19585849870578084,
+      "y": 0.2549450549450549,
       "uniqueID": "d53b91dd-68a9-4b8b-a882-1935c318ccb5",
       "ioValues": [
         {
@@ -76,8 +76,8 @@
     },
     {
       "atomType": "GitHubMolecule",
-      "x": 0.1449525452976704,
-      "y": 0.8307692307692307,
+      "x": 0.14840379637618636,
+      "y": 0.8153846153846154,
       "uniqueID": "id-109",
       "name": "2D-Rounded-Gear",
       "ioValues": [
@@ -88,7 +88,7 @@
         },
         {
           "name": "Step",
-          "ioValue": 15
+          "ioValue": 3
         }
       ],
       "topLevel": false,
@@ -111,7 +111,7 @@
             },
             {
               "name": "step",
-              "ioValue": 15
+              "ioValue": 3
             },
             {
               "name": "height",
@@ -189,7 +189,53 @@
       "ioValues": [
         {
           "name": "height",
-          "ioValue": 10
+          "ioValue": 40
+        }
+      ]
+    },
+    {
+      "atomType": "Difference",
+      "x": 0.4400345125107852,
+      "y": 0.32967032967032966,
+      "uniqueID": "id-126"
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.2622088006902502,
+      "y": 0.11428571428571428,
+      "uniqueID": "id-130",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 40
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.2628959276018099,
+      "y": 0.3666666666666667,
+      "uniqueID": "id-139",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 40
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.5340811044003451,
+      "y": 0.5120879120879122,
+      "uniqueID": "id-148",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
         }
       ]
     }
@@ -206,9 +252,54 @@
       "ap2ID": "d53b91dd-68a9-4b8b-a882-1935c318ccb5"
     },
     {
+      "ap2Name": "height",
+      "ap1ID": "ca0fa849-2c62-4cdb-8096-4da2d31a9a28",
+      "ap2ID": "id-122"
+    },
+    {
+      "ap2Name": "height",
+      "ap1ID": "ca0fa849-2c62-4cdb-8096-4da2d31a9a28",
+      "ap2ID": "id-130"
+    },
+    {
+      "ap2Name": "height",
+      "ap1ID": "ca0fa849-2c62-4cdb-8096-4da2d31a9a28",
+      "ap2ID": "id-139"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "7aba9d1b-9aaa-4b7c-9450-0efd168dcf32",
+      "ap2ID": "id-130"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "d53b91dd-68a9-4b8b-a882-1935c318ccb5",
+      "ap2ID": "id-139"
+    },
+    {
       "ap2Name": "geometry",
       "ap1ID": "id-109",
       "ap2ID": "id-122"
+    },
+    {
+      "ap2Name": "geometry1",
+      "ap1ID": "id-122",
+      "ap2ID": "id-126"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-126",
+      "ap2ID": "id-148"
+    },
+    {
+      "ap2Name": "geometry2",
+      "ap1ID": "id-130",
+      "ap2ID": "id-126"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-139",
+      "ap2ID": "id-148"
     }
   ],
   "unitsKey": "MM",
