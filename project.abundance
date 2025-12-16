@@ -7,11 +7,11 @@
   "ioValues": [
     {
       "name": "CircleDia1",
-      "ioValue": 22
+      "ioValue": 10
     },
     {
       "name": "CircleDia2",
-      "ioValue": 32
+      "ioValue": 10
     },
     {
       "name": "Height",
@@ -75,113 +75,6 @@
       ]
     },
     {
-      "atomType": "GitHubMolecule",
-      "x": 0.03968938740293356,
-      "y": 0.5340659340659341,
-      "uniqueID": "id-109",
-      "name": "2D-Rounded-Gear",
-      "ioValues": [
-        {
-          "name": "Teeth",
-          "ioValue": 20
-        },
-        {
-          "name": "Step",
-          "ioValue": 9,
-          "currentEquation": "9"
-        }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-105"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.5178571428571428,
-          "y": 0.46239554317548753,
-          "uniqueID": "id-106",
-          "ioValues": [
-            {
-              "name": "teeth",
-              "ioValue": 20
-            },
-            {
-              "name": "step",
-              "ioValue": 9
-            },
-            {
-              "name": "height",
-              "ioValue": 10
-            }
-          ],
-          "codeVersion": 1,
-          "code": " \n      //Inputs:[teeth, step, height]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      let angle = 360/(teeth*2); //The angle of each tooth is 1/2 of what would fit to make space for the teeth that come in\n      let radius = (step / 2) / Math.sin(angle / 2 * (Math.PI / 180)); //This is where the teeth circles are positioned\n      let apothem = (step / 2) / Math.tan(angle / 2 * (Math.PI / 180)); //This is the size of the circle that the teeth are subtracted from\n\n      console.log(\"The effective size of the gear is: \");\n      console.log(apothem);\n      console.log(\"The diameter of each tooth is: \");\n      console.log(step/2);\n      \n      //We can also create a new shape from scratch\n      let oneTooth = replicad.drawCircle(step/2)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane();\n      //And we extrude the shape to make it 3D\n      let createdShape = oneTooth.translate([radius, 0]);\n\n      let fusedShape = createdShape.clone();\n\n      for (let i = 1; i < teeth; i++) {\n        fusedShape = fusedShape.fuse(createdShape.clone().rotate(2*angle*i, [0, 0, 0], [0, 0, 1]))\n      } \n\n      let center = replicad.drawCircle(apothem)\n      //This is the plane we are going to put our new shape on\n      //const newPlane2 = new Plane();\n      //And we extrude the shape to make it 3D\n      //let createdShape2 = center.sketchOnPlane(newPlane2).extrude(height);\n      //center = center.cut(fusedShape.clone().rotate(angle+1, [0, 0, 0], [0, 0, 1]));\n\n      let fullGear = fusedShape.clone().fuse(center);\n\n      //Cut away the tooth in spots\n      for (let i = 0; i < teeth; i++) {\n        fullGear = fullGear.cut(createdShape.clone().rotate(2*angle*i + angle + .1, [0, 0, 0], [0, 0, 1])) //The 0.1 here is to account for a bug when the edges allign perfectly\n      } \n\n\n      //fullGear = fullGear.cut(fusedShape.rotate(angle, [0, 0, 0], [0, 0, 1]))\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [fullGear], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      return shape2\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-107",
-          "name": "Teeth",
-          "type": "number"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.24615384615384617,
-          "uniqueID": "id-108",
-          "name": "Step",
-          "type": "number"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-106",
-          "ap2ID": "id-105"
-        },
-        {
-          "ap2Name": "teeth",
-          "ap1ID": "id-107",
-          "ap2ID": "id-106"
-        },
-        {
-          "ap2Name": "step",
-          "ap1ID": "id-108",
-          "ap2ID": "id-106"
-        }
-      ],
-      "parentRepo": {
-        "lastFoundGit": "2025-12-15T15:47:14.717Z",
-        "privateRepo": false,
-        "repoName": "2D-Rounded-Gear",
-        "dateCreated": "2025-02-03T20:46:24Z",
-        "likes": 0,
-        "readMe": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/README.md?sanitize=true",
-        "yyyy": 2025,
-        "topMoleculeID": 1738615584571,
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/BarbourSmith/2D-Rounded-Gear",
-        "topics": [],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739427",
-        "ranking": 0.6,
-        "searchField": "2d-rounded-gear barboursmith a 2d version of a round tooth gear ",
-        "owner": "BarbourSmith",
-        "description": "A 2D version of a round tooth gear",
-        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "MM",
-      "fileTypeVersion": 1
-    },
-    {
       "atomType": "Extrude",
       "x": 0.23986194995685933,
       "y": 0.5560439560439561,
@@ -225,13 +118,11 @@
       "ioValues": [
         {
           "name": "xDist",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "yDist",
-          "ioValue": 0,
-          "currentEquation": "0"
+          "ioValue": 0
         },
         {
           "name": "zDist",
@@ -276,64 +167,7 @@
       "x": 0.4961173425366696,
       "y": 0.5934065934065934,
       "uniqueID": "id-184",
-      "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": {
-            "geometry": "extrude-9b216bcc-20-9-10-0-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-10",
-            "tags": [
-              "aTag"
-            ],
-            "color": "#A3CE5B",
-            "plane": {
-              "origin": [
-                0,
-                0,
-                0
-              ],
-              "xDir": [
-                1,
-                0,
-                0
-              ],
-              "normal": [
-                0,
-                0,
-                1
-              ]
-            },
-            "bom": [],
-            "dimension": "3D"
-          }
-        },
-        {
-          "name": "Shape 2",
-          "ioValue": {
-            "geometry": "move-extrude-circle-16-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-10-0-0-0",
-            "dimension": "3D",
-            "tags": [],
-            "plane": {
-              "origin": [
-                0,
-                0,
-                0
-              ],
-              "xDir": [
-                1,
-                0,
-                0
-              ],
-              "normal": [
-                0,
-                0,
-                1
-              ]
-            },
-            "color": "#aad7f2",
-            "bom": []
-          }
-        }
-      ],
+      "ioValues": [],
       "unionType": "Fusion"
     },
     {
@@ -361,16 +195,7 @@
       "x": 0.5677308024158757,
       "y": 0.27692307692307694,
       "uniqueID": "id-246",
-      "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": null
-        },
-        {
-          "name": "Shape 6",
-          "ioValue": null
-        }
-      ]
+      "ioValues": []
     },
     {
       "atomType": "Circle",
@@ -417,108 +242,7 @@
       ]
     }
   ],
-  "allConnectors": [
-    {
-      "ap2Name": "diameter",
-      "ap1ID": "cb7ffc6c-83cb-41d9-9954-63274c1da1b8",
-      "ap2ID": "7aba9d1b-9aaa-4b7c-9450-0efd168dcf32"
-    },
-    {
-      "ap2Name": "diameter",
-      "ap1ID": "6592ed87-1e08-4622-bbf2-16236d59943d",
-      "ap2ID": "d53b91dd-68a9-4b8b-a882-1935c318ccb5"
-    },
-    {
-      "ap2Name": "height",
-      "ap1ID": "ca0fa849-2c62-4cdb-8096-4da2d31a9a28",
-      "ap2ID": "id-122"
-    },
-    {
-      "ap2Name": "height",
-      "ap1ID": "ca0fa849-2c62-4cdb-8096-4da2d31a9a28",
-      "ap2ID": "id-130"
-    },
-    {
-      "ap2Name": "height",
-      "ap1ID": "ca0fa849-2c62-4cdb-8096-4da2d31a9a28",
-      "ap2ID": "id-139"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "7aba9d1b-9aaa-4b7c-9450-0efd168dcf32",
-      "ap2ID": "id-130"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "d53b91dd-68a9-4b8b-a882-1935c318ccb5",
-      "ap2ID": "id-139"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-109",
-      "ap2ID": "id-122"
-    },
-    {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-122",
-      "ap2ID": "id-184"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-130",
-      "ap2ID": "id-222"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-139",
-      "ap2ID": "id-153"
-    },
-    {
-      "ap2Name": "Shape 2",
-      "ap1ID": "id-153",
-      "ap2ID": "id-184"
-    },
-    {
-      "ap2Name": "number or geometry",
-      "ap1ID": "id-160",
-      "ap2ID": "fab73b2a-bbf8-4c5b-a712-e09dbb0d6d83"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-160",
-      "ap2ID": "id-174"
-    },
-    {
-      "ap2Name": "geometry1",
-      "ap1ID": "id-184",
-      "ap2ID": "id-160"
-    },
-    {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-222",
-      "ap2ID": "id-246"
-    },
-    {
-      "ap2Name": "geometry2",
-      "ap1ID": "id-246",
-      "ap2ID": "id-160"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-258",
-      "ap2ID": "id-262"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-262",
-      "ap2ID": "id-267"
-    },
-    {
-      "ap2Name": "Shape 6",
-      "ap1ID": "id-267",
-      "ap2ID": "id-246"
-    }
-  ],
+  "allConnectors": [],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
