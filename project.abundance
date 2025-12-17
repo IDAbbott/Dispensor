@@ -1696,14 +1696,14 @@
         },
         {
           "name": "zDist",
-          "ioValue": -12
+          "ioValue": 0
         }
       ]
     },
     {
       "atomType": "Molecule",
-      "x": 0.3978201634877384,
-      "y": 0.1075,
+      "x": 0.3533151680290645,
+      "y": 0.09,
       "uniqueID": "id-1179",
       "name": "CogWalls",
       "topLevel": false,
@@ -1716,8 +1716,8 @@
         },
         {
           "atomType": "Circle",
-          "x": 0.184377838328792,
-          "y": 0.21750000000000003,
+          "x": 0.18710263396911897,
+          "y": 0.20500000000000002,
           "uniqueID": "id-1262",
           "ioValues": [
             {
@@ -2365,8 +2365,8 @@
     },
     {
       "atomType": "Move",
-      "x": 0.5331516802906449,
-      "y": 0.8025000000000001,
+      "x": 0.5358764759309719,
+      "y": 0.7625000000000001,
       "uniqueID": "id-1413",
       "ioValues": [
         {
@@ -2380,7 +2380,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 0
+          "ioValue": 10
         }
       ]
     },
@@ -2413,7 +2413,7 @@
         },
         {
           "name": "zDist",
-          "ioValue": 0
+          "ioValue": 10
         }
       ]
     },
@@ -2515,8 +2515,8 @@
     },
     {
       "atomType": "Export",
-      "x": 0.8564940962761126,
-      "y": 0.8475,
+      "x": 0.8837420526793824,
+      "y": 0.86,
       "uniqueID": "id-1532",
       "ioValues": [
         {
@@ -2530,14 +2530,34 @@
         },
         {
           "name": "Part Name",
-          "ioValue": "Test_Loft",
-          "currentEquation": "Test_Loft"
+          "ioValue": "SpiceTrayWall",
+          "currentEquation": "SpiceTrayWall"
         }
       ],
       "type": "STEP",
       "resolution": 96,
       "importIndex": 0,
-      "partName": "Test_Loft"
+      "partName": "SpiceTrayWall"
+    },
+    {
+      "atomType": "Move",
+      "x": 0.43324250681198906,
+      "y": 0.22499999999999998,
+      "uniqueID": "id-1537",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 10
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -2639,7 +2659,7 @@
     {
       "ap2Name": "geometry",
       "ap1ID": "id-1179",
-      "ap2ID": "id-1334"
+      "ap2ID": "id-1537"
     },
     {
       "ap2Name": "Shape 5",
@@ -2710,6 +2730,11 @@
       "ap2Name": "geometry",
       "ap1ID": "id-1489",
       "ap2ID": "id-1415"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1537",
+      "ap2ID": "id-1334"
     }
   ],
   "unitsKey": "MM",
