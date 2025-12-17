@@ -52,8 +52,8 @@
     },
     {
       "atomType": "Difference",
-      "x": 0.49954586739327883,
-      "y": 0.42,
+      "x": 0.42597638510445046,
+      "y": 0.4125,
       "uniqueID": "id-160"
     },
     {
@@ -114,7 +114,7 @@
           "ioValues": [
             {
               "name": "xDist",
-              "ioValue": 100
+              "ioValue": 90
             },
             {
               "name": "yDist",
@@ -360,8 +360,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.30699364214350594,
-      "y": 0.5275,
+      "x": 0.24795640326975477,
+      "y": 0.48750000000000004,
       "uniqueID": "id-877",
       "name": "NegCogSpace",
       "ioValues": [
@@ -626,8 +626,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.31698455949137144,
-      "y": 0.1725,
+      "x": 0.23978201634877383,
+      "y": 0.14500000000000002,
       "uniqueID": "id-939",
       "name": "LargeCog",
       "ioValues": [
@@ -993,8 +993,8 @@
     },
     {
       "atomType": "Assembly",
-      "x": 0.555858310626703,
-      "y": 0.66,
+      "x": 0.6966394187102634,
+      "y": 0.635,
       "uniqueID": "id-999",
       "ioValues": [
         {
@@ -1004,6 +1004,51 @@
         {
           "name": "Shape 2",
           "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.5231607629427794,
+      "y": 0.5800000000000001,
+      "uniqueID": "id-1010",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 90
+        },
+        {
+          "name": "yDist",
+          "ioValue": 90
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Rotate",
+      "x": 0.43142597638510444,
+      "y": 0.5700000000000001,
+      "uniqueID": "id-1017",
+      "ioValues": [
+        {
+          "name": "x-axis degrees",
+          "ioValue": 0
+        },
+        {
+          "name": "y-axis degrees",
+          "ioValue": 0,
+          "currentEquation": "0"
+        },
+        {
+          "name": "z-axis degrees",
+          "ioValue": 10
         }
       ]
     }
@@ -1060,6 +1105,11 @@
       "ap2ID": "id-999"
     },
     {
+      "ap2Name": "geometry",
+      "ap1ID": "id-160",
+      "ap2ID": "id-1017"
+    },
+    {
       "ap2Name": "Shape 2",
       "ap1ID": "id-690",
       "ap2ID": "id-999"
@@ -1078,6 +1128,16 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-999",
       "ap2ID": "fab73b2a-bbf8-4c5b-a712-e09dbb0d6d83"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-1010",
+      "ap2ID": "id-999"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-1017",
+      "ap2ID": "id-1010"
     }
   ],
   "unitsKey": "MM",
