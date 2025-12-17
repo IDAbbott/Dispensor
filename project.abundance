@@ -1381,6 +1381,18 @@
             {
               "name": "Shape 3",
               "ioValue": null
+            },
+            {
+              "name": "Shape 4",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 5",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 6",
+              "ioValue": null
             }
           ]
         },
@@ -1460,8 +1472,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.38060853769300634,
-          "y": 0.6425,
+          "x": 0.30699364214350594,
+          "y": 0.885,
           "uniqueID": "id-1466",
           "ioValues": [
             {
@@ -1480,8 +1492,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.42420526793823793,
-          "y": 0.7649999999999999,
+          "x": 0.4014532243415077,
+          "y": 0.9675000000000001,
           "uniqueID": "id-1467",
           "ioValues": [
             {
@@ -1500,12 +1512,29 @@
         },
         {
           "atomType": "Extrude",
-          "x": 0.22524977293369663,
-          "y": 0.8075,
+          "x": 0.2061762034514078,
+          "y": 0.8975,
           "uniqueID": "id-1468",
           "ioValues": [
             {
               "name": "height",
+              "ioValue": 7
+            }
+          ]
+        },
+        {
+          "atomType": "RegularPolygon",
+          "x": 0.06176203451407811,
+          "y": 0.815,
+          "uniqueID": "id-1482",
+          "ioValues": [
+            {
+              "name": "number of sides",
+              "ioValue": 6,
+              "currentEquation": "6"
+            },
+            {
+              "name": "diameter",
               "ioValue": 20
             }
           ]
@@ -1618,9 +1647,14 @@
           "ap2ID": "id-1340"
         },
         {
-          "ap2Name": "geometry",
+          "ap2Name": "Shape 5",
           "ap1ID": "id-1466",
-          "ap2ID": "id-1468"
+          "ap2ID": "id-1117"
+        },
+        {
+          "ap2Name": "Shape 4",
+          "ap1ID": "id-1467",
+          "ap2ID": "id-1117"
         },
         {
           "ap2Name": "geometry",
@@ -1631,6 +1665,16 @@
           "ap2Name": "geometry",
           "ap1ID": "id-1468",
           "ap2ID": "id-1467"
+        },
+        {
+          "ap2Name": "Shape 6",
+          "ap1ID": "id-1468",
+          "ap2ID": "id-1117"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1482",
+          "ap2ID": "id-1468"
         }
       ],
       "fileTypeVersion": 1
