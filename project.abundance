@@ -1333,6 +1333,33 @@
                 "color": "#aad7f2",
                 "bom": []
               }
+            },
+            {
+              "name": "Shape 4",
+              "ioValue": {
+                "geometry": "move-rotate-extrude-rectangle-142-140-{\"origin\":[0,0,0],\"xDir\":[1,0,0],\"normal\":[0,0,1]}-10-0-0-45-45-45-0",
+                "dimension": "3D",
+                "plane": {
+                  "origin": [
+                    0,
+                    0,
+                    0
+                  ],
+                  "xDir": [
+                    1,
+                    0,
+                    0
+                  ],
+                  "normal": [
+                    0,
+                    0,
+                    1
+                  ]
+                },
+                "color": "#aad7f2",
+                "tags": [],
+                "bom": []
+              }
             }
           ],
           "unionType": "Fusion"
@@ -1365,8 +1392,8 @@
         },
         {
           "atomType": "Rectangle",
-          "x": 0.23978201634877383,
-          "y": 0.14500000000000002,
+          "x": 0.1916439600363306,
+          "y": 0.13999999999999999,
           "uniqueID": "id-1339",
           "ioValues": [
             {
@@ -1416,6 +1443,18 @@
             {
               "name": "zDist",
               "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.29164396003633064,
+          "y": 0.13999999999999999,
+          "uniqueID": "id-1356",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 10
             }
           ]
         }
@@ -1509,12 +1548,22 @@
         {
           "ap2Name": "geometry",
           "ap1ID": "id-1339",
-          "ap2ID": "id-1340"
+          "ap2ID": "id-1356"
         },
         {
           "ap2Name": "geometry",
           "ap1ID": "id-1340",
           "ap2ID": "id-1341"
+        },
+        {
+          "ap2Name": "Shape 4",
+          "ap1ID": "id-1341",
+          "ap2ID": "id-1116"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-1356",
+          "ap2ID": "id-1340"
         }
       ],
       "fileTypeVersion": 1
@@ -1542,8 +1591,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.46594005449591275,
-      "y": 0.13,
+      "x": 0.3978201634877384,
+      "y": 0.1075,
       "uniqueID": "id-1179",
       "name": "CogWalls",
       "topLevel": false,
@@ -1975,7 +2024,7 @@
       "ioValues": [
         {
           "name": "height",
-          "ioValue": 10
+          "ioValue": 40
         }
       ]
     }
