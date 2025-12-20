@@ -51,131 +51,6 @@
       "type": "number"
     },
     {
-      "atomType": "Difference",
-      "x": 0.6130790190735694,
-      "y": 0.3227848101265823,
-      "uniqueID": "id-160"
-    },
-    {
-      "atomType": "Export",
-      "x": 0.8192552225249773,
-      "y": 0.215,
-      "uniqueID": "id-174",
-      "ioValues": [
-        {
-          "name": "File Type",
-          "ioValue": "STEP",
-          "currentEquation": "STEP"
-        },
-        {
-          "name": "Resolution (dpi)",
-          "ioValue": 96
-        },
-        {
-          "name": "Part Name",
-          "ioValue": "Cog",
-          "currentEquation": "Cog"
-        }
-      ],
-      "type": "STEP",
-      "resolution": 96,
-      "importIndex": 0,
-      "partName": "Cog"
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.7366030881017257,
-      "y": 0.415,
-      "uniqueID": "id-999",
-      "ioValues": []
-    },
-    {
-      "atomType": "Move",
-      "x": 0.641628959276018,
-      "y": 0.13052631578947368,
-      "uniqueID": "id-1010",
-      "ioValues": [
-        {
-          "name": "xDist",
-          "ioValue": 90
-        },
-        {
-          "name": "yDist",
-          "ioValue": 90
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Rotate",
-      "x": 0.3178928247048138,
-      "y": 0.5738396624472574,
-      "uniqueID": "id-1017",
-      "ioValues": [
-        {
-          "name": "x-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "y-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "z-axis degrees",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.22070844686648503,
-      "y": 0.5717299578059072,
-      "uniqueID": "id-1172",
-      "ioValues": [
-        {
-          "name": "xDist",
-          "ioValue": 150
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0,
-          "currentEquation": "0"
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "Extrude",
-      "x": 0.514078110808356,
-      "y": 0.4493670886075949,
-      "uniqueID": "id-1334",
-      "ioValues": [
-        {
-          "name": "height",
-          "ioValue": 5
-        }
-      ]
-    },
-    {
-      "atomType": "Difference",
-      "x": 0.810172570390554,
-      "y": 0.8291139240506329,
-      "uniqueID": "id-1451"
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.6693914623069936,
-      "y": 0.6225,
-      "uniqueID": "id-1461",
-      "ioValues": []
-    },
-    {
       "atomType": "Export",
       "x": 0.8837420526793824,
       "y": 0.86,
@@ -202,151 +77,9 @@
       "partName": "SpiceTrayWall"
     },
     {
-      "atomType": "Move",
-      "x": 0.4425339366515837,
-      "y": 0.10105263157894737,
-      "uniqueID": "id-1537",
-      "ioValues": [
-        {
-          "name": "xDist",
-          "ioValue": 0
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
-      "atomType": "Assembly",
-      "x": 0.43778383287920075,
-      "y": 0.4451476793248945,
-      "uniqueID": "id-1918",
-      "ioValues": [
-        {
-          "name": "Shape 1",
-          "ioValue": null
-        },
-        {
-          "name": "Shape 2",
-          "ioValue": null
-        }
-      ]
-    },
-    {
-      "atomType": "GitHubMolecule",
-      "x": 0.11262488646684832,
-      "y": 0.5738396624472574,
-      "uniqueID": "id-1905",
-      "name": "2D-Rounded-Gear",
-      "ioValues": [
-        {
-          "name": "Teeth",
-          "ioValue": 20
-        },
-        {
-          "name": "Step",
-          "ioValue": 9
-        }
-      ],
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-1901"
-        },
-        {
-          "atomType": "Code",
-          "x": 0.5178571428571428,
-          "y": 0.46239554317548753,
-          "uniqueID": "id-1902",
-          "ioValues": [
-            {
-              "name": "teeth",
-              "ioValue": 20
-            },
-            {
-              "name": "step",
-              "ioValue": 9
-            },
-            {
-              "name": "height",
-              "ioValue": 10
-            }
-          ],
-          "codeVersion": 1,
-          "code": " \n      //Inputs:[teeth, step, height]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      let angle = 360/(teeth*2); //The angle of each tooth is 1/2 of what would fit to make space for the teeth that come in\n      let radius = (step / 2) / Math.sin(angle / 2 * (Math.PI / 180)); //This is where the teeth circles are positioned\n      let apothem = (step / 2) / Math.tan(angle / 2 * (Math.PI / 180)); //This is the size of the circle that the teeth are subtracted from\n\n      console.log(\"The effective size of the gear is: \");\n      console.log(apothem);\n      console.log(\"The diameter of each tooth is: \");\n      console.log(step/2);\n      \n      //We can also create a new shape from scratch\n      let oneTooth = replicad.drawCircle(step/2)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane();\n      //And we extrude the shape to make it 3D\n      let createdShape = oneTooth.translate([radius, 0]);\n\n      let fusedShape = createdShape.clone();\n\n      for (let i = 1; i < teeth; i++) {\n        fusedShape = fusedShape.fuse(createdShape.clone().rotate(2*angle*i, [0, 0, 0], [0, 0, 1]))\n      } \n\n      let center = replicad.drawCircle(apothem)\n      //This is the plane we are going to put our new shape on\n      //const newPlane2 = new Plane();\n      //And we extrude the shape to make it 3D\n      //let createdShape2 = center.sketchOnPlane(newPlane2).extrude(height);\n      //center = center.cut(fusedShape.clone().rotate(angle+1, [0, 0, 0], [0, 0, 1]));\n\n      let fullGear = fusedShape.clone().fuse(center);\n\n      //Cut away the tooth in spots\n      for (let i = 0; i < teeth; i++) {\n        fullGear = fullGear.cut(createdShape.clone().rotate(2*angle*i + angle + .1, [0, 0, 0], [0, 0, 1])) //The 0.1 here is to account for a bug when the edges allign perfectly\n      } \n\n\n      //fullGear = fullGear.cut(fusedShape.rotate(angle, [0, 0, 0], [0, 0, 1]))\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [fullGear], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      return shape2\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-1903",
-          "name": "Teeth",
-          "type": "number"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.24615384615384617,
-          "uniqueID": "id-1904",
-          "name": "Step",
-          "type": "number"
-        }
-      ],
-      "allConnectors": [
-        {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-1902",
-          "ap2ID": "id-1901"
-        },
-        {
-          "ap2Name": "teeth",
-          "ap1ID": "id-1903",
-          "ap2ID": "id-1902"
-        },
-        {
-          "ap2Name": "step",
-          "ap1ID": "id-1904",
-          "ap2ID": "id-1902"
-        }
-      ],
-      "parentRepo": {
-        "lastFoundGit": "2025-12-17T15:47:14.799Z",
-        "privateRepo": false,
-        "repoName": "2D-Rounded-Gear",
-        "dateCreated": "2025-02-03T20:46:24Z",
-        "likes": 0,
-        "readMe": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/README.md?sanitize=true",
-        "yyyy": 2025,
-        "topMoleculeID": 1738615584571,
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/BarbourSmith/2D-Rounded-Gear",
-        "topics": [],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739427",
-        "ranking": 0.6,
-        "searchField": "2d-rounded-gear barboursmith a 2d version of a round tooth gear ",
-        "owner": "BarbourSmith",
-        "description": "A 2D version of a round tooth gear",
-        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "MM",
-      "fileTypeVersion": 1
-    },
-    {
       "atomType": "Molecule",
-      "x": 0.45388371282745393,
-      "y": 0.7221998914304044,
+      "x": 0.335149863760218,
+      "y": 0.6645569620253164,
       "uniqueID": "id-2020",
       "name": "Exclude",
       "topLevel": false,
@@ -560,223 +293,253 @@
       "fileTypeVersion": 1
     },
     {
-      "atomType": "Rotate",
+      "atomType": "Molecule",
       "x": 0.3569482288828338,
-      "y": 0.3649789029535865,
-      "uniqueID": "id-2078",
-      "ioValues": [
-        {
-          "name": "x-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "y-axis degrees",
-          "ioValue": 0
-        },
-        {
-          "name": "z-axis degrees",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
-      "atomType": "Move",
-      "x": 0.24613987284287012,
-      "y": 0.35654008438818563,
-      "uniqueID": "id-2079",
-      "ioValues": [
-        {
-          "name": "xDist",
-          "ioValue": 0
-        },
-        {
-          "name": "yDist",
-          "ioValue": 0
-        },
-        {
-          "name": "zDist",
-          "ioValue": 0
-        }
-      ]
-    },
-    {
-      "atomType": "GitHubMolecule",
-      "x": 0.1335149863760218,
-      "y": 0.3713080168776371,
-      "uniqueID": "id-2080",
-      "name": "2D-Rounded-Gear",
-      "ioValues": [
-        {
-          "name": "Teeth",
-          "ioValue": 20
-        },
-        {
-          "name": "Step",
-          "ioValue": 9
-        }
-      ],
+      "y": 0.2974683544303797,
+      "uniqueID": "id-2122",
+      "name": "MainGears",
       "topLevel": false,
       "allAtoms": [
         {
           "atomType": "Output",
           "x": 0.98,
           "y": 0.5,
-          "uniqueID": "id-2081"
+          "uniqueID": "id-2124"
         },
         {
-          "atomType": "Code",
-          "x": 0.5178571428571428,
-          "y": 0.46239554317548753,
-          "uniqueID": "id-2082",
+          "atomType": "Difference",
+          "x": 0.3778837420526794,
+          "y": 0.139873417721519,
+          "uniqueID": "id-2126"
+        },
+        {
+          "atomType": "Move",
+          "x": 0.4959582198001817,
+          "y": 0.3677215189873418,
+          "uniqueID": "id-2127",
           "ioValues": [
             {
-              "name": "teeth",
+              "name": "xDist",
+              "ioValue": 150
+            },
+            {
+              "name": "yDist",
+              "ioValue": 0
+            },
+            {
+              "name": "zDist",
+              "ioValue": 0
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.689418710263397,
+          "y": 0.3909282700421941,
+          "uniqueID": "id-2128",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 5
+            }
+          ]
+        },
+        {
+          "atomType": "Rotate",
+          "x": 0.5014078110808357,
+          "y": 0.18206751054852316,
+          "uniqueID": "id-2129",
+          "ioValues": [
+            {
+              "name": "x-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "y-axis degrees",
+              "ioValue": 0
+            },
+            {
+              "name": "z-axis degrees",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Circle",
+          "x": 0.2089464123524069,
+          "y": 0.06181434599156117,
+          "uniqueID": "id-2135",
+          "ioValues": [
+            {
+              "name": "diameter",
+              "ioValue": 23
+            }
+          ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.6040417801998184,
+          "y": 0.3149789029535865,
+          "uniqueID": "id-2136",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
+            }
+          ]
+        },
+        {
+          "atomType": "GitHubMolecule",
+          "x": 0.1553587647593097,
+          "y": 0.3128691983122363,
+          "uniqueID": "id-2130",
+          "name": "2D-Rounded-Gear",
+          "ioValues": [
+            {
+              "name": "Teeth",
               "ioValue": 20
             },
             {
-              "name": "step",
+              "name": "Step",
               "ioValue": 9
-            },
-            {
-              "name": "height",
-              "ioValue": 10
             }
           ],
-          "codeVersion": 1,
-          "code": " \n      //Inputs:[teeth, step, height]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      let angle = 360/(teeth*2); //The angle of each tooth is 1/2 of what would fit to make space for the teeth that come in\n      let radius = (step / 2) / Math.sin(angle / 2 * (Math.PI / 180)); //This is where the teeth circles are positioned\n      let apothem = (step / 2) / Math.tan(angle / 2 * (Math.PI / 180)); //This is the size of the circle that the teeth are subtracted from\n\n      console.log(\"The effective size of the gear is: \");\n      console.log(apothem);\n      console.log(\"The diameter of each tooth is: \");\n      console.log(step/2);\n      \n      //We can also create a new shape from scratch\n      let oneTooth = replicad.drawCircle(step/2)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane();\n      //And we extrude the shape to make it 3D\n      let createdShape = oneTooth.translate([radius, 0]);\n\n      let fusedShape = createdShape.clone();\n\n      for (let i = 1; i < teeth; i++) {\n        fusedShape = fusedShape.fuse(createdShape.clone().rotate(2*angle*i, [0, 0, 0], [0, 0, 1]))\n      } \n\n      let center = replicad.drawCircle(apothem)\n      //This is the plane we are going to put our new shape on\n      //const newPlane2 = new Plane();\n      //And we extrude the shape to make it 3D\n      //let createdShape2 = center.sketchOnPlane(newPlane2).extrude(height);\n      //center = center.cut(fusedShape.clone().rotate(angle+1, [0, 0, 0], [0, 0, 1]));\n\n      let fullGear = fusedShape.clone().fuse(center);\n\n      //Cut away the tooth in spots\n      for (let i = 0; i < teeth; i++) {\n        fullGear = fullGear.cut(createdShape.clone().rotate(2*angle*i + angle + .1, [0, 0, 0], [0, 0, 1])) //The 0.1 here is to account for a bug when the edges allign perfectly\n      } \n\n\n      //fullGear = fullGear.cut(fusedShape.rotate(angle, [0, 0, 0], [0, 0, 1]))\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [fullGear], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      return shape2\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.15384615384615385,
-          "uniqueID": "id-2083",
-          "name": "Teeth",
-          "type": "number"
-        },
-        {
-          "atomType": "Input",
-          "x": 0.025384615384615384,
-          "y": 0.24615384615384617,
-          "uniqueID": "id-2084",
-          "name": "Step",
-          "type": "number"
+          "topLevel": false,
+          "allAtoms": [
+            {
+              "atomType": "Output",
+              "x": 0.98,
+              "y": 0.5,
+              "uniqueID": "id-2131"
+            },
+            {
+              "atomType": "Code",
+              "x": 0.5178571428571428,
+              "y": 0.46239554317548753,
+              "uniqueID": "id-2132",
+              "ioValues": [
+                {
+                  "name": "teeth",
+                  "ioValue": 20
+                },
+                {
+                  "name": "step",
+                  "ioValue": 9
+                },
+                {
+                  "name": "height",
+                  "ioValue": 10
+                }
+              ],
+              "codeVersion": 1,
+              "code": " \n      //Inputs:[teeth, step, height]\n      //This defines the molecules inputs and creates variables with the same names which can be referenced in the code\n      \n      let angle = 360/(teeth*2); //The angle of each tooth is 1/2 of what would fit to make space for the teeth that come in\n      let radius = (step / 2) / Math.sin(angle / 2 * (Math.PI / 180)); //This is where the teeth circles are positioned\n      let apothem = (step / 2) / Math.tan(angle / 2 * (Math.PI / 180)); //This is the size of the circle that the teeth are subtracted from\n\n      console.log(\"The effective size of the gear is: \");\n      console.log(apothem);\n      console.log(\"The diameter of each tooth is: \");\n      console.log(step/2);\n      \n      //We can also create a new shape from scratch\n      let oneTooth = replicad.drawCircle(step/2)\n      //This is the plane we are going to put our new shape on\n      const newPlane = new replicad.Plane();\n      //And we extrude the shape to make it 3D\n      let createdShape = oneTooth.translate([radius, 0]);\n\n      let fusedShape = createdShape.clone();\n\n      for (let i = 1; i < teeth; i++) {\n        fusedShape = fusedShape.fuse(createdShape.clone().rotate(2*angle*i, [0, 0, 0], [0, 0, 1]))\n      } \n\n      let center = replicad.drawCircle(apothem)\n      //This is the plane we are going to put our new shape on\n      //const newPlane2 = new Plane();\n      //And we extrude the shape to make it 3D\n      //let createdShape2 = center.sketchOnPlane(newPlane2).extrude(height);\n      //center = center.cut(fusedShape.clone().rotate(angle+1, [0, 0, 0], [0, 0, 1]));\n\n      let fullGear = fusedShape.clone().fuse(center);\n\n      //Cut away the tooth in spots\n      for (let i = 0; i < teeth; i++) {\n        fullGear = fullGear.cut(createdShape.clone().rotate(2*angle*i + angle + .1, [0, 0, 0], [0, 0, 1])) //The 0.1 here is to account for a bug when the edges allign perfectly\n      } \n\n\n      //fullGear = fullGear.cut(fusedShape.rotate(angle, [0, 0, 0], [0, 0, 1]))\n      \n      //For our new geometry we need to define the tags, color, plane, etc\n      let shape2 = {\n          geometry: [fullGear], \n          tags: [\"aTag\"],\n          color: '#A3CE5B',\n          plane: newPlane,\n          bom: []\n      }\n      \n      return shape2\n      \n      \n          /**\n          To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n          If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n          Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n          https://replicad.xyz/docs/introapp/UserGuide.html \n          Return a replicad object that includes geometry, color, tags and plane. \n      \n      \n          Example Code Atom:\n      \n            Inputs:[shape, x];\n      \n            let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n      \n            return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n      \n            - See more examples at _______ \n      \n      \n          */\n      "
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.15384615384615385,
+              "uniqueID": "id-2133",
+              "name": "Teeth",
+              "type": "number"
+            },
+            {
+              "atomType": "Input",
+              "x": 0.025384615384615384,
+              "y": 0.24615384615384617,
+              "uniqueID": "id-2134",
+              "name": "Step",
+              "type": "number"
+            }
+          ],
+          "allConnectors": [
+            {
+              "ap2Name": "number or geometry",
+              "ap1ID": "id-2132",
+              "ap2ID": "id-2131"
+            },
+            {
+              "ap2Name": "teeth",
+              "ap1ID": "id-2133",
+              "ap2ID": "id-2132"
+            },
+            {
+              "ap2Name": "step",
+              "ap1ID": "id-2134",
+              "ap2ID": "id-2132"
+            }
+          ],
+          "parentRepo": {
+            "lastFoundGit": "2025-12-17T15:47:14.799Z",
+            "privateRepo": false,
+            "repoName": "2D-Rounded-Gear",
+            "dateCreated": "2025-02-03T20:46:24Z",
+            "likes": 0,
+            "readMe": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/README.md?sanitize=true",
+            "yyyy": 2025,
+            "topMoleculeID": 1738615584571,
+            "githubMoleculesUsed": [],
+            "html_url": "https://github.com/BarbourSmith/2D-Rounded-Gear",
+            "topics": [],
+            "parentRepo": null,
+            "forks": 0,
+            "dateModified": "739427",
+            "ranking": 0.6,
+            "searchField": "2d-rounded-gear barboursmith a 2d version of a round tooth gear ",
+            "owner": "BarbourSmith",
+            "description": "A 2D version of a round tooth gear",
+            "contentURL": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/project.abundance?sanitize=true",
+            "svgURL": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/project.svg?sanitize=true",
+            "isLocal": false
+          },
+          "unitsKey": "MM",
+          "fileTypeVersion": 1
         }
       ],
       "allConnectors": [
         {
-          "ap2Name": "number or geometry",
-          "ap1ID": "id-2082",
-          "ap2ID": "id-2081"
+          "ap2Name": "geometry",
+          "ap1ID": "id-2126",
+          "ap2ID": "id-2129"
         },
         {
-          "ap2Name": "teeth",
-          "ap1ID": "id-2083",
-          "ap2ID": "id-2082"
+          "ap2Name": "geometry",
+          "ap1ID": "id-2126",
+          "ap2ID": "id-2127"
         },
         {
-          "ap2Name": "step",
-          "ap1ID": "id-2084",
-          "ap2ID": "id-2082"
+          "ap2Name": "Shape 2",
+          "ap1ID": "id-2127",
+          "ap2ID": "id-2136"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-2129",
+          "ap2ID": "id-2136"
+        },
+        {
+          "ap2Name": "geometry2",
+          "ap1ID": "id-2135",
+          "ap2ID": "id-2126"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2136",
+          "ap2ID": "id-2128"
+        },
+        {
+          "ap2Name": "geometry1",
+          "ap1ID": "id-2130",
+          "ap2ID": "id-2126"
         }
       ],
-      "parentRepo": {
-        "lastFoundGit": "2025-12-17T15:47:14.799Z",
-        "privateRepo": false,
-        "repoName": "2D-Rounded-Gear",
-        "dateCreated": "2025-02-03T20:46:24Z",
-        "likes": 0,
-        "readMe": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/README.md?sanitize=true",
-        "yyyy": 2025,
-        "topMoleculeID": 1738615584571,
-        "githubMoleculesUsed": [],
-        "html_url": "https://github.com/BarbourSmith/2D-Rounded-Gear",
-        "topics": [],
-        "parentRepo": null,
-        "forks": 0,
-        "dateModified": "739427",
-        "ranking": 0.6,
-        "searchField": "2d-rounded-gear barboursmith a 2d version of a round tooth gear ",
-        "owner": "BarbourSmith",
-        "description": "A 2D version of a round tooth gear",
-        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/project.abundance?sanitize=true",
-        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/2D-Rounded-Gear/master/project.svg?sanitize=true",
-        "isLocal": false
-      },
-      "unitsKey": "MM",
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Circle",
-      "x": 0.15985467756584923,
-      "y": 0.11392405063291139,
-      "uniqueID": "id-2108",
-      "ioValues": [
-        {
-          "name": "diameter",
-          "ioValue": 10
-        }
-      ]
-    },
-    {
-      "atomType": "Extrude",
-      "x": 0.25985467756584923,
-      "y": 0.11392405063291139,
-      "uniqueID": "id-2111",
-      "ioValues": [
-        {
-          "name": "height",
-          "ioValue": 5
-        }
-      ]
     }
   ],
-  "allConnectors": [
-    {
-      "ap2Name": "Shape 1",
-      "ap1ID": "id-1017",
-      "ap2ID": "id-1918"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1172",
-      "ap2ID": "id-1017"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1918",
-      "ap2ID": "id-1334"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-1905",
-      "ap2ID": "id-1172"
-    },
-    {
-      "ap2Name": "Shape 2",
-      "ap1ID": "id-2078",
-      "ap2ID": "id-1918"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-2079",
-      "ap2ID": "id-2078"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-2080",
-      "ap2ID": "id-2079"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-2108",
-      "ap2ID": "id-2111"
-    },
-    {
-      "ap2Name": "geometry",
-      "ap1ID": "id-2111",
-      "ap2ID": "id-1537"
-    }
-  ],
+  "allConnectors": [],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
