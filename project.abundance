@@ -937,10 +937,6 @@
         {
           "name": "Shape 3",
           "ioValue": null
-        },
-        {
-          "name": "Shape 4",
-          "ioValue": null
         }
       ]
     },
@@ -1054,6 +1050,27 @@
           "ioValue": 0
         }
       ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.3787465940054496,
+      "y": 0.3987341772151899,
+      "uniqueID": "id-2638",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 0,
+          "currentEquation": "0"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 150
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -1103,9 +1120,9 @@
       "ap2ID": "id-2629"
     },
     {
-      "ap2Name": "Shape 4",
-      "ap1ID": "id-2623",
-      "ap2ID": "id-2598"
+      "ap2Name": "geometry",
+      "ap1ID": "id-2620",
+      "ap2ID": "id-2638"
     }
   ],
   "unitsKey": "MM",
