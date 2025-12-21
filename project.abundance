@@ -78,8 +78,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.3278837420526794,
-      "y": 0.869198312236287,
+      "x": 0.23251589464123523,
+      "y": 0.879746835443038,
       "uniqueID": "id-2020",
       "name": "Exclude",
       "topLevel": false,
@@ -294,8 +294,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.32515894641235243,
-      "y": 0.70042194092827,
+      "x": 0.24341507720254313,
+      "y": 0.7531645569620253,
       "uniqueID": "id-2122",
       "name": "MainGears",
       "topLevel": false,
@@ -672,8 +672,8 @@
     },
     {
       "atomType": "Molecule",
-      "x": 0.26248864668483196,
-      "y": 0.379746835443038,
+      "x": 0.23614895549500453,
+      "y": 0.6160337552742616,
       "uniqueID": "id-2541",
       "name": "New Molecule",
       "topLevel": false,
@@ -886,9 +886,128 @@
         }
       ],
       "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.1952770208900999,
+      "y": 0.14345991561181434,
+      "uniqueID": "id-2589",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 150
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.29064486830154407,
+      "y": 0.2890295358649789,
+      "uniqueID": "id-2592",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 125
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.38782924613987285,
+      "y": 0.13080168776371306,
+      "uniqueID": "id-2598",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 3",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.19255222524977292,
+      "y": 0.3649789029535865,
+      "uniqueID": "id-2603",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 150
+        },
+        {
+          "name": "y length",
+          "ioValue": 150
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.29064486830154407,
+      "y": 0.4409282700421941,
+      "uniqueID": "id-2607",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 60
+        },
+        {
+          "name": "yDist",
+          "ioValue": 0
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
     }
   ],
-  "allConnectors": [],
+  "allConnectors": [
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-2122",
+      "ap2ID": "fab73b2a-bbf8-4c5b-a712-e09dbb0d6d83"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-2589",
+      "ap2ID": "id-2598"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2589",
+      "ap2ID": "id-2592"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-2592",
+      "ap2ID": "id-2598"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2603",
+      "ap2ID": "id-2607"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-2607",
+      "ap2ID": "id-2598"
+    }
+  ],
   "unitsKey": "MM",
   "fileTypeVersion": 1,
   "filetypeVersion": 1
