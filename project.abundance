@@ -320,7 +320,8 @@
           "ioValues": [
             {
               "name": "xDist",
-              "ioValue": 125
+              "ioValue": 125,
+              "currentEquation": "125"
             },
             {
               "name": "yDist",
@@ -675,7 +676,7 @@
       "x": 0.23614895549500453,
       "y": 0.6160337552742616,
       "uniqueID": "id-2541",
-      "name": "New Molecule",
+      "name": "PlanetaryGear",
       "topLevel": false,
       "allAtoms": [
         {
@@ -974,6 +975,28 @@
           "ioValue": 0
         }
       ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.3333333333333333,
+      "y": 0.620253164556962,
+      "uniqueID": "id-2614",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 63,
+          "currentEquation": "63"
+        },
+        {
+          "name": "yDist",
+          "ioValue": 66
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0,
+          "currentEquation": "0"
+        }
+      ]
     }
   ],
   "allConnectors": [
@@ -981,6 +1004,11 @@
       "ap2Name": "number or geometry",
       "ap1ID": "id-2122",
       "ap2ID": "fab73b2a-bbf8-4c5b-a712-e09dbb0d6d83"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-2541",
+      "ap2ID": "id-2614"
     },
     {
       "ap2Name": "Shape 1",
