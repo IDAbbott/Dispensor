@@ -519,7 +519,7 @@
           "ioValues": [
             {
               "name": "diameter",
-              "ioValue": 25
+              "ioValue": 30
             }
           ]
         },
@@ -531,8 +531,8 @@
         },
         {
           "atomType": "Move",
-          "x": 0.3133514986376022,
-          "y": 0.7932489451476793,
+          "x": 0.2842870118074478,
+          "y": 0.7890295358649789,
           "uniqueID": "id-2477",
           "ioValues": [
             {
@@ -541,30 +541,52 @@
             },
             {
               "name": "yDist",
-              "ioValue": 0
+              "ioValue": 0,
+              "currentEquation": "0"
             },
             {
               "name": "zDist",
-              "ioValue": 2
+              "ioValue": 5
             }
           ]
         },
         {
-          "atomType": "Assembly",
-          "x": 0.24069028156221617,
-          "y": 0.5654008438818565,
-          "uniqueID": "id-2483",
-          "ioValues": []
-        },
-        {
           "atomType": "Extrude",
-          "x": 0.14259763851044505,
-          "y": 0.5337552742616034,
+          "x": 0.14532243415077203,
+          "y": 0.5506329113924051,
           "uniqueID": "id-2486",
           "ioValues": [
             {
               "name": "height",
               "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Extrude",
+          "x": 0.17983651226158037,
+          "y": 0.8185654008438817,
+          "uniqueID": "id-2491",
+          "ioValues": [
+            {
+              "name": "height",
+              "ioValue": 10
+            }
+          ]
+        },
+        {
+          "atomType": "Assembly",
+          "x": 0.2452316076294278,
+          "y": 0.569620253164557,
+          "uniqueID": "id-2496",
+          "ioValues": [
+            {
+              "name": "Shape 1",
+              "ioValue": null
+            },
+            {
+              "name": "Shape 2",
+              "ioValue": null
             }
           ]
         }
@@ -590,7 +612,16 @@
           "ap1ID": "id-2129",
           "ap2ID": "id-2136"
         },
-        null,
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2135",
+          "ap2ID": "id-2486"
+        },
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-2136",
+          "ap2ID": "id-2124"
+        },
         {
           "ap2Name": "geometry",
           "ap1ID": "id-2130",
@@ -612,8 +643,28 @@
           "ap2ID": "id-2464"
         },
         {
-          "ap2Name": "geometry2",
+          "ap2Name": "geometry",
+          "ap1ID": "id-2464",
+          "ap2ID": "id-2491"
+        },
+        {
+          "ap2Name": "Shape 2",
           "ap1ID": "id-2477",
+          "ap2ID": "id-2496"
+        },
+        {
+          "ap2Name": "Shape 1",
+          "ap1ID": "id-2486",
+          "ap2ID": "id-2496"
+        },
+        {
+          "ap2Name": "geometry",
+          "ap1ID": "id-2491",
+          "ap2ID": "id-2477"
+        },
+        {
+          "ap2Name": "geometry2",
+          "ap1ID": "id-2496",
           "ap2ID": "id-2126"
         }
       ],
